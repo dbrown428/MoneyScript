@@ -1,0 +1,33 @@
+{
+  "name": "moneyscript",
+  "description": "Just a barebones TypeScript/NodeJS starter project.",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "make test"
+  },
+  "devDependencies": {
+  	"mocha": "^2.2.5",
+  	"@types/mocha": "^2.2.34",
+  	"chai": "^3.0.0",
+    "@types/chai": "^3.4.34",
+    "ts-node": "^1.7.2",
+    "typescript": "^2.1.4",
+    "nyc": "^10.0.0"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html",
+      "lcov"
+    ],
+    "all": true
+  }
+}
